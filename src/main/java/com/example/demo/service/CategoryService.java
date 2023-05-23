@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.common.DateNotFoundException;
+import com.example.demo.common.DataNotFoundException;
 import com.example.demo.dao.BaseDao;
 import com.example.demo.entity.Category;
 
@@ -21,7 +21,7 @@ public class CategoryService implements BaseService<Category> {
 	}
 
 	@Override
-	public Category findById(Integer id) throws DateNotFoundException {
+	public Category findById(Integer id) throws DataNotFoundException {
 		// TODO 自動生成されたメソッド・スタブ
 		return categoryDao.findById(id);
 	}

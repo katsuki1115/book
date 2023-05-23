@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.common.DateNotFoundException;
+import com.example.demo.common.DataNotFoundException;
 import com.example.demo.dao.BookDao;
 import com.example.demo.entity.Book;
 
@@ -22,17 +22,17 @@ public class BookService implements BaseService<Book> {
 	}
 
 	@Override
-	public Book findById(Integer id) throws DateNotFoundException {
+	public Book findById(Integer id) throws DataNotFoundException {
 		// TODO 自動生成されたメソッド・スタブ
 		return bookDao.findById(id);
 	}
 	
-	public List<Book> findByauthorId(Integer authorId) throws DateNotFoundException {
+	public List<Book> findByauthorId(Integer authorId) throws DataNotFoundException {
 		// TODO 自動生成されたメソッド・スタブ
 		return bookDao.findByAuthorId(authorId);
 	}
 	
-	public List<Book> findByCategoryId(Integer categoryId) throws DateNotFoundException {
+	public List<Book> findByCategoryId(Integer categoryId) throws DataNotFoundException {
 		// TODO 自動生成されたメソッド・スタブ
 		return bookDao.findByCategoryId(categoryId);
 	}

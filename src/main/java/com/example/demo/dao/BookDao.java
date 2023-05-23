@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.common.DateNotFoundException;
+import com.example.demo.common.DataNotFoundException;
 import com.example.demo.entity.Book;
 import com.example.demo.repository.BookRepository;
 
@@ -22,9 +22,9 @@ public class BookDao implements BaseDao<Book>{
 	}
 
 	@Override
-	public Book findById(Integer id) throws DateNotFoundException {
+	public Book findById(Integer id) throws DataNotFoundException {
 		// TODO 自動生成されたメソッド・スタブ
-		return repository.findById(id).orElseThrow(() -> new DateNotFoundException());
+		return repository.findById(id).orElseThrow(() -> new DataNotFoundException());
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class BookDao implements BaseDao<Book>{
 		try {
 			Book book = this.findById(id);
 			repository.delete(book);
-		} catch (DateNotFoundException e) {
+		} catch (DataNotFoundException e) {
 			System.out.println("do nothing");
 		}
 	}
