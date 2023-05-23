@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -31,6 +30,6 @@ public class Book {
 	private Author author;
 	
 	@NotNull(message = "カテゴリが未入力です")
-	@OneToMany(mappedBy = "author")
+	@ManyToOne
 	private Category category;
 }
