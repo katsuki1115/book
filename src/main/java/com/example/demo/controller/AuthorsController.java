@@ -59,7 +59,7 @@ public class AuthorsController {
 		} catch (Exception e) {
 			flash = new FlashData().danger("処理中にエラーが発生しました");
 		}
-		ra.addFlashAttribute("flash", false);
+		ra.addFlashAttribute("flash", flash);
 		return "redirect:/authors";
 	}
 	
